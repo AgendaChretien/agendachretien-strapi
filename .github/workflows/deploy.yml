@@ -26,8 +26,8 @@ jobs:
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_USER: ${{ secrets.SSH_USER }}
           REMOTE_PORT: 5022
-          ARGS: "-rlgoDzvc -i --delete"
-          SOURCE: "build public config database app.js package.json package-lock.json"
+          ARGS: "-rlgoDzv -i --delete"
+          SOURCE: "src build public config database app.js package.json package-lock.json"
           TARGET: $APP_PATH
           SCRIPT_AFTER: |
             /usr/sbin/cloudlinux-selector install-modules --json --interpreter=nodejs --app-root=${{env.APP_PATH}}
