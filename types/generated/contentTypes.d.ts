@@ -230,8 +230,8 @@ export interface PluginContentReleasesReleaseAction
   attributes: {
     type: Schema.Attribute.Enumeration<['publish', 'unpublish']> &
       Schema.Attribute.Required;
-    entry: Schema.Attribute.Relation<'morphToOne'>;
     contentType: Schema.Attribute.String & Schema.Attribute.Required;
+    entryDocumentId: Schema.Attribute.String;
     locale: Schema.Attribute.String;
     release: Schema.Attribute.Relation<
       'manyToOne',
