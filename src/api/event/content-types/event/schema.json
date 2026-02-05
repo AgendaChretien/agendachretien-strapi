@@ -30,14 +30,17 @@
       "required": true,
       "allowedTypes": ["images"]
     },
-    "date": {
+    "startDate": {
       "type": "date",
       "required": true
     },
-    "startAt": {
+    "endDate": {
+      "type": "date"
+    },
+    "startTime": {
       "type": "time"
     },
-    "endAt": {
+    "endTime": {
       "type": "time"
     },
     "url": {

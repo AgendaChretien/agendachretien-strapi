@@ -460,10 +460,10 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     city: Schema.Attribute.Relation<"oneToOne", "api::city.city">;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
-    date: Schema.Attribute.Date & Schema.Attribute.Required;
     description: Schema.Attribute.Blocks & Schema.Attribute.Required;
     email: Schema.Attribute.Email;
-    endAt: Schema.Attribute.Time;
+    endDate: Schema.Attribute.Date;
+    endTime: Schema.Attribute.Time;
     extraPictures: Schema.Attribute.Media<"images" | "files" | "videos" | "audios", true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<"oneToMany", "api::event.event"> &
@@ -471,7 +471,8 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     phone: Schema.Attribute.String;
     picture: Schema.Attribute.Media<"images"> & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    startAt: Schema.Attribute.Time;
+    startDate: Schema.Attribute.Date & Schema.Attribute.Required;
+    startTime: Schema.Attribute.Time;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
