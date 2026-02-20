@@ -22,12 +22,12 @@
     },
     "description": {
       "type": "blocks",
-      "required": true
+      "required": false
     },
     "picture": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": ["images"]
     },
     "startDate": {
