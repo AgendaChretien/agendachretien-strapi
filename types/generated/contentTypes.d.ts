@@ -453,14 +453,14 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     singularName: "event";
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     address: Schema.Attribute.Text;
     city: Schema.Attribute.Relation<"oneToOne", "api::city.city">;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
-    description: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    description: Schema.Attribute.Blocks;
     email: Schema.Attribute.Email;
     endDate: Schema.Attribute.Date;
     endTime: Schema.Attribute.Time;
@@ -469,7 +469,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<"oneToMany", "api::event.event"> &
       Schema.Attribute.Private;
     phone: Schema.Attribute.String;
-    picture: Schema.Attribute.Media<"images"> & Schema.Attribute.Required;
+    picture: Schema.Attribute.Media<"images">;
     publishedAt: Schema.Attribute.DateTime;
     startDate: Schema.Attribute.Date & Schema.Attribute.Required;
     startTime: Schema.Attribute.Time;
@@ -702,6 +702,7 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
     ext: Schema.Attribute.String;
+    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<"manyToOne", "plugin::upload.folder"> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &

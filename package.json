@@ -19,9 +19,9 @@
     "fmt:check": "oxfmt --check"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.34.0",
-    "@strapi/plugin-users-permissions": "5.34.0",
-    "@strapi/strapi": "5.34.0",
+    "@strapi/plugin-cloud": "5.36.1",
+    "@strapi/plugin-users-permissions": "5.36.1",
+    "@strapi/strapi": "5.36.1",
     "better-sqlite3": "12.6.2",
     "lint-staged": "^16.2.7",
     "react": "^18.0.0",
@@ -34,9 +34,9 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "oxfmt": "^0.28.0",
-    "oxlint": "^1.43.0",
-    "oxlint-tsgolint": "^0.11.4",
+    "oxfmt": "^0.35.0",
+    "oxlint": "^1.50.0",
+    "oxlint-tsgolint": "^0.15.0",
     "typescript": "^5"
   },
   "simple-git-hooks": {
@@ -50,7 +50,7 @@
     "node": ">=20.0.0 <=24.x.x",
     "npm": ">=6.0.0"
   },
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "npm@11.10.1+sha512.c286afb98d8e803150d4afed07d407b14b96f7cf6729fbec29337f879a86c92fb7f8186f5cdfc30364cdcf1e7af496857d3aab113e5b110347c1584593e53582",
   "strapi": {
     "uuid": "0f43d669-6e79-40ef-97ee-bd2b8da5960d",
     "installId": "66b262411a465d6ec459b1705f57f9e99f2b8b77181f2e2f3479263d469d5d33"
