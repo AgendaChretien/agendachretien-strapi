@@ -862,10 +862,11 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
+    association: Schema.Attribute.String;
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    church: Schema.Attribute.String;
     confirmationToken: Schema.Attribute.String & Schema.Attribute.Private;
     confirmed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     createdAt: Schema.Attribute.DateTime;
@@ -875,6 +876,8 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    firstName: Schema.Attribute.String & Schema.Attribute.Required;
+    lastName: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<"oneToMany", "plugin::users-permissions.user"> &
       Schema.Attribute.Private;
