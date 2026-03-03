@@ -79,6 +79,9 @@
     },
     "association": {
       "type": "string"
+    },
+    "phone": {
+      "type": "string"
     }
   }
 }
