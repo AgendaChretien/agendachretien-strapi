@@ -18,7 +18,7 @@ export default ({ env }) => ({
         },
       },
       settings: {
-        defaultFrom: "noreply@agendachretien.fr",
+        defaultFrom: "no-reply@agendachretien.fr",
         defaultReplyTo: "contact@agendachretien.fr",
       },
     },
