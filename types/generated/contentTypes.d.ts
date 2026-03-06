@@ -422,6 +422,30 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
+  collectionName: "categories";
+  info: {
+    displayName: "Category";
+    pluralName: "categories";
+    singularName: "category";
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+    events: Schema.Attribute.Relation<"manyToMany", "api::event.event">;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<"oneToMany", "api::category.category"> &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCityCity extends Struct.CollectionTypeSchema {
   collectionName: "cities";
   info: {
@@ -457,6 +481,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
   };
   attributes: {
     address: Schema.Attribute.Text;
+    categories: Schema.Attribute.Relation<"manyToMany", "api::category.category">;
     city: Schema.Attribute.Relation<"oneToOne", "api::city.city">;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
@@ -914,6 +939,7 @@ declare module "@strapi/strapi" {
       "admin::transfer-token": AdminTransferToken;
       "admin::transfer-token-permission": AdminTransferTokenPermission;
       "admin::user": AdminUser;
+      "api::category.category": ApiCategoryCategory;
       "api::city.city": ApiCityCity;
       "api::event.event": ApiEventEvent;
       "plugin::content-releases.release": PluginContentReleasesRelease;
