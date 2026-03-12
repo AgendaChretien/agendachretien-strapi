@@ -495,6 +495,16 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     phone: Schema.Attribute.String;
     picture: Schema.Attribute.Media<"images">;
+    privacyLevel: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 3;
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<1>;
     publishedAt: Schema.Attribute.DateTime;
     startDate: Schema.Attribute.Date & Schema.Attribute.Required;
     startTime: Schema.Attribute.Time;
@@ -889,6 +899,16 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
     draftAndPublish: false;
   };
   attributes: {
+    accessLevel: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 3;
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<1>;
     association: Schema.Attribute.String;
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     church: Schema.Attribute.String;
