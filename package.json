@@ -19,10 +19,10 @@
     "fmt:check": "oxfmt --check"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.37.1",
-    "@strapi/plugin-users-permissions": "5.37.1",
-    "@strapi/provider-email-nodemailer": "^5.37.1",
-    "@strapi/strapi": "5.37.1",
+    "@strapi/plugin-cloud": "5.39.0",
+    "@strapi/plugin-users-permissions": "5.39.0",
+    "@strapi/provider-email-nodemailer": "^5.39.0",
+    "@strapi/strapi": "5.39.0",
     "better-sqlite3": "12.6.2",
     "lint-staged": "^16.2.7",
     "radashi": "^12.7.2",
