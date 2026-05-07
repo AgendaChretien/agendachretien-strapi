@@ -19,13 +19,13 @@
     "fmt:check": "oxfmt --check"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.37.1",
-    "@strapi/plugin-users-permissions": "5.37.1",
-    "@strapi/provider-email-nodemailer": "^5.37.1",
-    "@strapi/strapi": "5.37.1",
-    "better-sqlite3": "12.6.2",
-    "lint-staged": "^16.2.7",
-    "radashi": "^12.7.2",
+    "@strapi/plugin-cloud": "5.45.0",
+    "@strapi/plugin-users-permissions": "5.45.0",
+    "@strapi/provider-email-nodemailer": "^5.45.0",
+    "@strapi/strapi": "5.45.0",
+    "better-sqlite3": "12.9.0",
+    "lint-staged": "^17.0.2",
+    "radashi": "^12.9.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
@@ -36,9 +36,9 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "oxfmt": "^0.35.0",
-    "oxlint": "^1.50.0",
-    "oxlint-tsgolint": "^0.15.0",
+    "oxfmt": "^0.48.0",
+    "oxlint": "^1.63.0",
+    "oxlint-tsgolint": "^0.22.1",
     "typescript": "^5"
   },
   "simple-git-hooks": {
@@ -52,7 +52,7 @@
     "node": ">=20.0.0 <=24.x.x",
     "npm": ">=6.0.0"
   },
-  "packageManager": "npm@11.10.1+sha512.c286afb98d8e803150d4afed07d407b14b96f7cf6729fbec29337f879a86c92fb7f8186f5cdfc30364cdcf1e7af496857d3aab113e5b110347c1584593e53582",
+  "packageManager": "npm@11.14.0+sha512.ea37d9cea2bc11f5869d379941ef9b80cc78220884667ee4d5e338184f1213cd41de261c879d9d55230ed610b63a735b14b230cefc14914c6c38e7143c6d9723",
   "strapi": {
     "uuid": "0f43d669-6e79-40ef-97ee-bd2b8da5960d",
     "installId": "66b262411a465d6ec459b1705f57f9e99f2b8b77181f2e2f3479263d469d5d33"
